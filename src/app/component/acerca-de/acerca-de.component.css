@@ -2,7 +2,7 @@
     padding: 20px;
 }
 div{
-    background-color:rgb(244, 205, 215);
+    background-color:rgba(181, 157, 238, 0.752);
     text-align: center;
     
 }
@@ -14,7 +14,8 @@ div{
         border-radius: 50%;
         box-shadow: 2px 2px rgb(40, 39, 39);
         left: 2%;
-        top: 660px;
+        /* top: 660px; */
+        top: 1200px; 
     }
 
 }
