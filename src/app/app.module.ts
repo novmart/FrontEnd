@@ -6,7 +6,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { LogoAPComponent } from './component/logo-ap/logo-ap.component';
 import { BannerComponent } from './component/banner/banner.component';
 import { AcercaDeComponent } from './component/acerca-de/acerca-de.component';
-import { ExperenciaComponent } from './component/experencia/experencia.component';
+import { ExperienciaComponent } from './component/experencia/experiencia.component';
 import { EducacionComponent } from './component/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './component/skills/skills.component';
@@ -17,6 +17,8 @@ import { HomeComponent } from './component/home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './component/experencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './component/experencia/edit-experiencia/edit-experiencia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +26,15 @@ import { interceptorProvider } from './service/interceptor-service';
     LogoAPComponent,
     BannerComponent,
     AcercaDeComponent,
-    ExperenciaComponent,
+    ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
