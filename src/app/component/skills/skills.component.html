@@ -1,41 +1,39 @@
 <div class="row">
-    <h1>Hard Skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress [backgroundPadding]="7" [percent]="85" [radius]="60" [space]="-2" [title]="'HTML'"
-            [outerStrokeWidth]="2" [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-            [animationDuration]="600"
-            [showUnits]="false"></circle-progress>
+
+    <div class="col-lg-2">
+        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress [backgroundPadding]="7" [percent]="85" [radius]="60" [space]="-2" [title]="'CSS'"
-            [outerStrokeWidth]="2" [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-            [animationDuration]="600"
-            [showUnits]="false"></circle-progress>
+
+    <h1>Hard & Soft Skills</h1>
+
+
+    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+        <circle-progress 
+        [backgroundPadding]="7" 
+        [percent]="(skill.porcentaje)" 
+        [showSubtitle]="false"
+        [radius]="60" [space]="-2"
+        [title]="(skill.nombre)" 
+        [outerStrokeWidth]="2" 
+        [outerStrokeColor]="'#808080'"
+        [innerStrokeColor]="'#e7e8ea'" 
+        [animation]="true" 
+        [animationDuration]="600"
+        [showUnits]="false">
+    </circle-progress>
+    <div>
+        <td *ngIf="isLogged">
+            <button class="btn btn-outline-secondary" routerLink="/editskill/{{skill.id}}">
+                <i class="bi bi-pen-fill"></i></button>
+        </td>
+        <!-- BORRAR -->
+        <td *ngIf="isLogged">
+            <button class="btn btn-outline-danger" (click)="delete(skill.id)">
+                <i class="bi bi-trash3-fill"></i> </button>
+        </td>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress [backgroundPadding]="7" [percent]="85" [radius]="60" [space]="-2" [title]="'JAVA'"
-            [outerStrokeWidth]="2" [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-            [animationDuration]="600"
-            [showUnits]="false"></circle-progress>
+
+       
     </div>
-    <h1>Soft Skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress [backgroundPadding]="7" [percent]="85" [radius]="60" [space]="-2" [title]="'GIT HUB'"
-            [outerStrokeWidth]="2" [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-            [animationDuration]="600"
-            [showUnits]="false"></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress [backgroundPadding]="7" [percent]="85" [radius]="60" [space]="-2" [title]="'TEAM WORK'"
-            [outerStrokeWidth]="2" [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-            [animationDuration]="600"
-            [showUnits]="false"></circle-progress>
-    </div>
-    
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress [backgroundPadding]="7" [percent]="85" [radius]="60" [space]="-2" [title]="'ENGLISH'"
-            [outerStrokeWidth]="2" [outerStrokeColor]="'#808080'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
-            [animationDuration]="600"
-            [showUnits]="false"></circle-progress>
-    </div>
+
 </div>
