@@ -1,6 +1,10 @@
 <div class="row">
+            <button type="button" class="btn btn-outline-dark" routerLink="/editacercade/3" *ngIf="isLogged">
+                Editar Usuario
+            </button>
+       
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/unnamed.png" class="img-fluid" id="fotoperfil">
+        <img src={{persona.img}} class="img-fluid" id="fotoperfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
@@ -9,9 +13,7 @@
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
             <h1>Acerca de mí</h1>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi deserunt error, debitis eum provident
-                earum unde? At eveniet voluptates officia dignissimos, nulla aut dolorum tempora recusandae veritatis
-                ipsum culpa soluta!</p>
+            <p>{{persona.descripcion}}</p>
         </span>
 
     </div>
