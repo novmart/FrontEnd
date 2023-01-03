@@ -1,14 +1,77 @@
 <div class="row">
-    <h1>Proyectos </h1>
-    <div class="container">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h3>Task List</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error delectus expedita commodi illum voluptas
-                rerum quidem eligendi, dolorem quo autem porro aliquid consequuntur sint illo earum voluptatem
-                laboriosam nostrum tempora.</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-     <img src="../../../assets/pexels-pixabay-270360.jpg" class="img-fluid img-proyecto" alt="">
-        </div>
+    <h1>Proyectos</h1>
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-dark add-button" routerLink="/nuevapro" *ngIf="isLogged"><h3><i class="bi bi-plus"></i></h3>Agregar Proyecto</button>
     </div>
-</div>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11 col-md-11 col-sm-11">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Proyectos of pro">
+            <td>
+              <h4>{{ Proyectos.nombrePro }}</h4>
+            </td>
+            <td>
+              <h4>{{ Proyectos.descripcionPro }}</h4>
+            </td>
+            <td>
+              <h4>{{ Proyectos.fechaPro }}</h4>
+            </td>
+  
+            <td *ngIf="isLogged">
+              <button
+                class="btn btn-light"
+                routerLink="/editpro/{{ Proyectos.id }}" title="Editar">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+            </td>
+            <td *ngIf="isLogged">
+              <button
+                class="btn btn-danger"
+                (click)="delete(Proyectos.id)"
+                title="Eliminar"
+              >
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </td>
+            <td>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 titles">
+                <button type="button" class="btn btn-light">
+                  <a href="{{Proyectos.linkPro}}" target="_blank"
+                    >Ir al proyecto</a>
+                </button>
+  
+              </div>
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+       -->

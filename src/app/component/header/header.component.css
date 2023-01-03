@@ -1,7 +1,8 @@
 div{
-    background-color: rgba(13, 3, 93, 0.832);
+    background-color: rgba(13, 4, 80, 0.978);
 }
 app-social{
+   background-color: aliceblue;
     float: right;
     margin-top: 20px;
     margin-left: 50px;
