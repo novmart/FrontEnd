@@ -1,12 +1,12 @@
-<div class="row">
+<!-- <div class="row">
+
+   
+    <h1>HARD & SOFT SKILL</h1>
 
     <div class="col-lg-2">
-        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+        <button type="button" routerLink="/newskill" class="btn btn-outline-light" *ngIf="isLogged"><i class="bi bi-plus-lg"></i></button>
     </div>
-
-    <h1>Hard & Soft Skills</h1>
-
-
+ 
     <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
         <circle-progress 
         [backgroundPadding]="7" 
@@ -26,14 +26,67 @@
             <button class="btn btn-outline-secondary" routerLink="/editskill/{{skill.id}}">
                 <i class="bi bi-pen-fill"></i></button>
         </td>
-        <!-- BORRAR -->
-        <td *ngIf="isLogged">
+   
+         <td *ngIf="isLogged">
             <button class="btn btn-outline-danger" (click)="delete(skill.id)">
                 <i class="bi bi-trash3-fill"></i> </button>
         </td>
     </div>
 
        
-    </div>
+    </div> -->
 
-</div>
+<!-- </div>  -->
+
+<div class="row">
+
+    <h1>HARD & SOFT SKILLS</h1>
+    <div class="col-lg-2">
+      <button1 type="button" routerLink="/newskill" class="btn btn-outline-light" *ngIf="isLogged">
+        <i class="bi bi-plus-lg"></i>
+      </button1>
+    </div>
+  
+  
+  
+    <div class=" text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+      <circle-progress 
+      [percent]="(skill.porcentaje)" 
+      [radius]="70" 
+      [title]="(skill.nombre)" 
+      [backgroundPadding]="7"
+      [backgroundGradient]="false" 
+      [backgroundOpacity]="1" 
+      [outerStrokeWidth]="12" 
+      [innerStrokeWidth]="6"
+      [outerStrokeColor]="'#b01b7a'" 
+      [innerStrokeColor]="'#5218fa'" 
+      [showSubtitle]="false" 
+      titleColor="#f3f6f4"
+      subtitleColor="#bcbcbc" 
+      titleFontSize=20 
+      unitsFontSize=10 
+      titleFontWeight=normal 
+      unitsFontWeight=normal
+      subtitleFontWeight=normal 
+      [animation]="true" 
+      [animationDuration]="1000">
+     </circle-progress>
+  
+  
+      <div>
+        <td *ngIf="isLogged">
+          <button class="btn btn-outline-light" routerLink="/editskill/{{skill.id}}">
+            <i class="bi bi-pen"></i></button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-outline-danger" (click)="delete(skill.id)">
+            <i class="bi bi-recycle"></i></button>
+        </td>
+    
+      </div>
+      
+    </div>
+  
+  
+  </div>

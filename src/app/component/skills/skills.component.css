@@ -1,9 +1,29 @@
 .row{
-    background-color: antiquewhite;
+    background: #090226;
+    color: white;
     padding: 20px;
 }
+.percent{
+    color: aliceblue;
+}
+
+
 .circulo{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+h1 {
+    color: rgb(250, 22, 105);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    text-align: left;
+
 }

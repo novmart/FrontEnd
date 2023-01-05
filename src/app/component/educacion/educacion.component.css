@@ -3,8 +3,24 @@
 
 }
 div{
-    background-color: rgb(181, 180, 218);
+    background-color: #090226;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 }
-h1,h3{
-   display: inline;
+table{
+    color: aliceblue;
+    margin-top: 10px;
+   
+    text-align: right;
+   
+}
+h1{
+    color: rgb(250, 22, 105);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+   text-align: left;
+   
+}
+h3{
+    color: azure;
+    text-align: left;
 }

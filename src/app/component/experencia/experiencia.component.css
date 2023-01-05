@@ -1,10 +1,31 @@
-.row{
+.row {
     padding: 20px;
 
 }
-div{
-    background-color: rgb(204, 180, 218);
+
+div {
+    background-color: #090226;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
 }
-h1,h3{
-   display: inline;
+
+table {
+    color: aliceblue;
+    margin-top: 10px;
+
+
+}
+
+h1 {
+    color: rgb(250, 22, 105);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    text-align: left;
+
+}
+
+h3 {
+    color: azure;
+    text-align: left;
 }
