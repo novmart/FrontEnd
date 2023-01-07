@@ -13,8 +13,9 @@ export const environment = {
     messagingSenderId: '224721348735',
     measurementId: 'G-L5N9JP99HL',
   },
-  production: false,
-  URL: 'http://localhost:8080'
+  production: true,
+  URL: 'https://backend-arg-production.up.railway.app/'
+  // 'http://localhost:8080'
   // URL: .com ya subir el proyecto 
 };
 

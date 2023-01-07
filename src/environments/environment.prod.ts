@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '224721348735',
     measurementId: 'G-L5N9JP99HL',
   },
-  production: true
+  production: true,
+  URL: 'https://backend-arg-production.up.railway.app/'
 };
