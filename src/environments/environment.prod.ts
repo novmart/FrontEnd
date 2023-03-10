@@ -11,4 +11,5 @@ export const environment = {
   },
   production: true,
   URL: 'https://backend-arg-production.up.railway.app/'
+  
 };

@@ -14,7 +14,7 @@ export const environment = {
     measurementId: 'G-L5N9JP99HL',
   },
   production: true,
-  URL: 'https://backend-arg-production.up.railway.app/'
+  URL:'https://backend-arg-production.up.railway.app/'
   // 'http://localhost:8080'
   // URL: .com ya subir el proyecto 
 };
